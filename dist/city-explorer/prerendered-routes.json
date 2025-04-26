@@ -1,0 +1,13 @@
+{
+  "routes": {
+    "/proyecto-City-explorer-front-end/categoria-vista/hoteles": {},
+    "/proyecto-City-explorer-front-end/categoria-vista/parques": {},
+    "/proyecto-City-explorer-front-end/categoria-vista/restaurantes": {},
+    "/proyecto-City-explorer-front-end/pagar-anuncio/12345": {},
+    "/proyecto-City-explorer-front-end/pagar-anuncio/67890": {},
+    "/proyecto-City-explorer-front-end/pagar-anuncio/ABCDE": {},
+    "/proyecto-City-explorer-front-end/vista-detallada-anuncio/123": {},
+    "/proyecto-City-explorer-front-end/vista-detallada-anuncio/456": {},
+    "/proyecto-City-explorer-front-end/vista-detallada-anuncio/789": {}
+  }
+}

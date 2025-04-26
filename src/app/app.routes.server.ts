@@ -6,7 +6,7 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     getPrerenderParams: async () => {
       return [
-        { categoria: 'restaurantes' },
+        { categoria: 'restaurantes' }, // Strings válidos
         { categoria: 'hoteles' },
         { categoria: 'parques' },
       ];
@@ -28,9 +28,9 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     getPrerenderParams: async () => {
       return [
-        { id_anuncio: 'A123' },
-        { id_anuncio: 'B456' },
-        { id_anuncio: 'C789' },
+        { 'id_anuncio': '12345' }, // Asegúrate de que los valores sean strings
+        { 'id_anuncio': '67890' },
+        { 'id_anuncio': 'ABCDE' },
       ];
     },
   },

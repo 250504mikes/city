@@ -69,7 +69,7 @@ const routes: Routes = [
     component: AyudaComponent,
   },
   {
-    path: 'pagar-anuncio/:id-lugar', 
+    path: 'pagar-anuncio/:id_anuncio', 
     component: PagoAnuncioComponent,
   },
   {

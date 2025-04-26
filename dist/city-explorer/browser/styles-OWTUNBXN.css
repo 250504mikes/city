@@ -1,0 +1,1 @@
+@charset "UTF-8";html,body{margin:0;padding:0;background-color:transparent}*{box-sizing:border-box}.modal-dialog{position:absolute;top:120px;left:50%;transform:translate(-50%);width:90%;max-width:500px}@media (max-width: 768px){.modal-dialog{top:90px;width:95%}}
