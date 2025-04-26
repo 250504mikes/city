@@ -15,4 +15,4 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head><li
 <link rel="modulepreload" href="chunk-YW7XCQQJ.js">
 
 
-<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"12":"t0","13":"t1"},"c":{"12":[{"i":"t0","r":1,"x":2}],"13":[]}},{"c":{"0":[{"i":"c3356843064","r":1}]}}]}</script></body></html>`;
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"12":"t2","13":"t3"},"c":{"12":[{"i":"t2","r":1,"x":2}],"13":[]}},{"c":{"0":[{"i":"c3356843064","r":1}]}}]}</script></body></html>`;

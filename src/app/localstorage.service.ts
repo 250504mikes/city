@@ -6,25 +6,57 @@ import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 })
 export class LocalstorageService {
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
-  setItem(key: string, value: string) {
+
+  /**
+   * Almacena un valor en localStorage.
+   * @param key Clave bajo la cual se almacenará el valor.
+   * @param value Valor a almacenar (se convierte a string).
+   */
+  setItem(key: string, value: any): void {
     if (isPlatformBrowser(this.platformId)) {
-      localStorage.setItem(key, value);
+      try {
+        const serializedValue = typeof value === 'string' ? value : JSON.stringify(value);
+        localStorage.setItem(key, serializedValue);
+      } catch (error) {
+        console.error('Error al guardar en localStorage:', error);
+      }
     }
   }
-  getItem(key: string) {
+
+  /**
+   * Obtiene un valor de localStorage.
+   * @param key Clave del valor a recuperar.
+   * @returns El valor almacenado, o null si no existe.
+   */
+  getItem<T = any>(key: string): T | null {
     if (isPlatformBrowser(this.platformId)) {
-      return localStorage.getItem(key);
+      try {
+        const value = localStorage.getItem(key);
+        return value ? JSON.parse(value) : null;
+      } catch (error) {
+        console.error('Error al obtener de localStorage:', error);
+        return null;
+      }
     }
     return null;
   }
-  clean() {
+
+  /**
+   * Limpia todo el contenido de localStorage.
+   */
+  clean(): void {
     if (isPlatformBrowser(this.platformId)) {
       localStorage.clear();
     }
   }
-  cleanItem(key: string) {
+
+  /**
+   * Elimina un elemento específico de localStorage.
+   * @param key Clave del elemento a eliminar.
+   */
+  cleanItem(key: string): void {
     if (isPlatformBrowser(this.platformId)) {
-      return localStorage.removeItem(key);
+      localStorage.removeItem(key);
     }
   }
 }

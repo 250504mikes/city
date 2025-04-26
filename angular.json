@@ -28,6 +28,9 @@
             "outputPath": "dist/city-explorer",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "scripts": [
+  "node_modules/webpack-bundle-analyzer/lib/bin/analyzer.js"
+],
             "polyfills": [
               "zone.js"
             ],
